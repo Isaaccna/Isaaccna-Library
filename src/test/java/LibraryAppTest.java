@@ -231,8 +231,8 @@ public class LibraryAppTest {
         bookList.add(b3);
         Mockito.when(mockBookDAO.getAllBooks()).thenReturn(bookList);
         Mockito.when(mockBookDAO.getBookByIsbn(103)).thenReturn(b3);
-        Assert.assertEquals(null, bookService.addBook(b3));
-        Mockito.verify(mockBookDAO, Mockito.never()).insertBook(b3);
+        Assert.assertEquals(null, bookService.addBook(b3));        Mockito.verify(mockBookDAO, Mockito.never()).insertBook(b3);
+
     }
 
     /**
